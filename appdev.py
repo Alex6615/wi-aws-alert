@@ -40,7 +40,7 @@ async def app():
         cloudfrontstatus = cloudFrontStatus()
         if len(cloudfrontstatus) > 1 :
             msg = ''.join(str(x) for x in cloudfrontstatus)
-            await bot.sendMessage(msg)
+            await bot.sendCFMessage(msg)
         time.sleep(int(LOOP_INTERVAL))
 
 if __name__ == "__main__" :
